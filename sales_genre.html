@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visualization Final Project</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1 style="color: white; text-align: center; padding-top: 25px;">Top 20 Highest Sold Video Games</h1>
+        <div class ="button_area">
+            <a href="home_page.html" class="button">Overview</a>
+            <a href="sales_year.html" class="button">Sales by Year</a>
+            <a href="sales_genre.html" class="button active">Sales by Genre</a>
+            <a href="sales_console.html" class="button">Sales by Console</a>
+            <a href="sales_developer.html" class="button">Sales by Developer</a>
+            <a href="sales_critic.html" class="button">Sales by Critic</a>
+        </div>
+    </div>
+    
+    <h2 style="text-align: center; margin-top: 20px;">Sales by Genre</h2>
+
+    <p style="text-align: center; margin-top: 10px; font-size: 16px;">
+        Genre has always been a hot topic for video games. Along with consoles, it has always been a seperator, with people arguing over which one is truly the king of the space. This visualization clearly shows that Action is the king and no other genre is close to it.</p>
+
+    <div class='tableauPlaceholder' id='viz1745790248991' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sa&#47;sales_genre&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='sales_genre&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sa&#47;sales_genre&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1745790248991');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #733635;
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .button_area {
+            margin-top: 40px; /* Adds space between the <h1> and the buttons */
+            display: inline-flex; /* Puts buttons next to each other */
+            background-color: #cc6666; /* Light gray background */
+            padding: 5px; /* Space inside the border */
+            border-radius: 25px; /* Rounded corners, optional */
+        }
+        .button{
+            border: none;
+            background: none;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 0 5px; /* space between buttons */
+            width: 100px; /* Fixed width for buttons */
+            height: 50px; /* Fixed height for buttons */
+            color: white;
+            font-size: 18px;
+            padding: 5px;
+            
+        }
+        
+
+        .button.active {
+            border-radius: 10px;
+            background-color: #ff9999; /* Highlight when clicked and stay */
+            color: black;
+        }
+
+    </style>
+
+    <script>
+
+        // Select all buttons
+        const buttons = document.querySelectorAll('.button');
+
+        // Add click event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove 'active' class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+                // Add 'active' class to the clicked button
+                button.classList.add('active');
+            });
+        });
+    </script>
+
+</html>
+
+</html>
